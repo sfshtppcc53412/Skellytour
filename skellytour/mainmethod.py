@@ -145,8 +145,6 @@ def main():
 
 
     ## Report system information and available resources
-    hostname=os.uname()[1]
-    logging.info("Hostname: "+str(hostname))
     systemram=round(psutil.virtual_memory().available/(1024**3))
     logging.info("System RAM: "+str(systemram)+" GB")
     gpuram=round(GPUtil.getGPUs()[0].memoryTotal/(1024))
